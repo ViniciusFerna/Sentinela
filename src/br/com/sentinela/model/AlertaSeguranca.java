@@ -2,7 +2,7 @@ package br.com.sentinela.model;
 
 public class AlertaSeguranca {
 	
-	private Sensor sensorOrigem;
+	private DispositivoMonitoramento sensorOrigem;
 	
 	private ZonaRestrita zonaAfetada;
 	
@@ -10,13 +10,13 @@ public class AlertaSeguranca {
 	
 	private String mensagem;
 	
-	public AlertaSeguranca(Sensor sensorOrigem, ZonaRestrita zonaAfetada, String severidade) {
+	public AlertaSeguranca(DispositivoMonitoramento sensorOrigem, ZonaRestrita zonaAfetada, String severidade) {
 		this.sensorOrigem = sensorOrigem;
 		this.zonaAfetada = zonaAfetada;
 		this.severidade = severidade;
 	}
 
-	public Sensor getSensorOrigem() {
+	public DispositivoMonitoramento getSensorOrigem() {
 		return sensorOrigem;
 	}
 

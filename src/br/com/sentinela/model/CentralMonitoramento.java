@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class CentralMonitoramento {
 	
-	private Sensor[] sensores;
+	private DispositivoMonitoramento[] sensores;
 
-	public CentralMonitoramento(Sensor[] sensores) {
+	public CentralMonitoramento(DispositivoMonitoramento[] sensores) {
 		this.sensores = sensores;
 	}
 	
-	public Sensor[] getSensores() {
+	public DispositivoMonitoramento[] getSensores() {
 		return sensores;
 	}
 	
-	public ArrayList<AlertaSeguranca> analisarLeituras(Sensor[] sensores) {
+	public ArrayList<AlertaSeguranca> analisarLeituras(DispositivoMonitoramento[] sensores) {
 		int quantidadeSensores = sensores.length;
 		
 		ArrayList<AlertaSeguranca> alertas = new ArrayList<>();
@@ -37,6 +37,11 @@ public class CentralMonitoramento {
 					);
 					alertas.add(alertaMedio);
 			}
+		}
+		if(alertas.isEmpty()) {
+			System.out.println("Operacao normal");
+			System.out.println("------------------------------");
+			return alertas;
 		}
 		return alertas;
 	}

@@ -10,6 +10,8 @@ public class ZonaRestrita {
 	
 	private double nivelRadiacaoAtual;
 	
+	private boolean violacaoNoPerimetro;
+	
 	public ZonaRestrita(String identificador, String descricao, double limiteRadiacao) {
 		this.setIdentificador(identificador);
 		this.setDescricao(descricao);
@@ -30,6 +32,14 @@ public class ZonaRestrita {
 
 	public double getNivelRadiacaoAtual() {
 		return nivelRadiacaoAtual;
+	}
+	
+	public boolean getViolacaoNoPerimetro() {
+		return violacaoNoPerimetro;
+	}
+	
+	public void setViolacaoNoPerimetro(boolean violacao) {
+		this.violacaoNoPerimetro = violacao;
 	}
 	
 	private void setIdentificador(String identificador) {
